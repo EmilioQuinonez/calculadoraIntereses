@@ -32,8 +32,15 @@
       </div>
 
       <div>
-        <label>Compuesto (veces por año, solo para interés compuesto):</label>
-        <input id="compound" placeholder="Ej. 12 para mensual" disabled />
+        <label for="compound"
+          >Compuesto (veces por año, solo para interés compuesto):</label
+        >
+        <select id="compound" disabled>
+          <option value="1">Anualmente</option>
+          <option value="2">Semestralmente</option>
+          <option value="12">Mensualmente</option>
+          <option value="365">Diariamente</option>
+        </select>
       </div>
 
       <div>
