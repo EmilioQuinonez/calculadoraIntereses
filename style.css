@@ -41,3 +41,9 @@ h2 {
 h3 {
   margin-top: 20px;
 }
+
+.advertencia {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}

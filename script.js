@@ -13,16 +13,16 @@ function calcularInteres() {
   let t = parseFloat(document.getElementById("time").value);
   let tipo = document.getElementById("interestType").value;
   let A = 0;
-  let nada = document.getElementById("resultado");
+  let nada = document.getElementById("advertencia");
 
   if (tipo === "simple") {
     A = P * (1 + r * t);
-    document.getElementById("resultado").innerText = A.toFixed(2);
   } else if (tipo === "compuesto") {
     let n = parseFloat(document.getElementById("compound").value) || 1;
     A = P * Math.pow(1 + r / n, n * t);
-    document.getElementById("resultado").innerText = A.toFixed(2);
-  } else {
+  } else if (tipo === "vacio") {
     nada.innerHTML = "Debes seleccionar un tipo de interes.";
+  } else {
   }
+  document.getElementById("resultado").innerText = A.toFixed(2);
 }
