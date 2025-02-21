@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Calculadora de Interes</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h2><b>Calculadora de Interés</b></h2>
+        <label>Monto inicial (P):</label>
+        <input id="principal" placeholder="Ingrese el monto inicial" />
+      </div>
+      <div>
+        <label>Tasa de interés (%):</label>
+        <input id="rate" placeholder="Ingrese la tasa anual" />
+      </div>
+      <div>
+        <label>Tiempo (años):</label>
+        <input id="time" placeholder="Ingrese los años" />
+      </div>
+      <div>
+        <label for="interestType">Tipo de interés:</label>
+        <select id="interestType">
+          <option value="vacio">Seleccione tipo de interés</option>
+          <option value="simple">Interés Simple</option>
+          <option value="compuesto">Interés Compuesto</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Compuesto (veces por año, solo para interés compuesto):</label>
+        <input id="compound" placeholder="Ej. 12 para mensual" disabled />
+      </div>
+
+      <div>
+        <button onclick="calcularInteres()">Calcular</button>
+        <h3>Resultado: <span id="resultado"></span></h3>
+      </div>
+    </div>
+  </body>
+</html>
